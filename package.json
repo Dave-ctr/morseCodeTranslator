@@ -1,0 +1,17 @@
+{
+  "name": "morsecodetranslator",
+  "version": "1.0.0",
+  "description": "A simple app to translate Morse Code to English and vice versa.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dave",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}

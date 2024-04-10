@@ -1,0 +1,1 @@
+A simple app to translate Morse Code to English and vice versa.
