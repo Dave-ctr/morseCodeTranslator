@@ -48,22 +48,29 @@ describe( 'Tests for convertToMorse function', () =>
   it( ' should translate "?!.,:;+-/=()&_"$@" to "..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-." ', () =>
   {
     const result = convertToMorse( '?!.,:;+-/=()&_"$@' );
-    expect( result ).toBe( '..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-.' );
+    expect( result ).toBe( '..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.- .-... ..--.- .-..-. ...-..- .--.-.' );
   } );
 
   // 8. it should display an error message if a character is not convertable
   it( ' should display an error message if a character is not convertable ', () =>
   {
     const result = convertToMorse( '*' );
-    expect( result ).toBe( 'Only Enter Convertable Characters' );
+    expect( result ).toBe( 'Only Enter Convertible Characters' );
   } )
 
   // 9. it should display an error message if user input is an empty string, null or undefined
-  it( ' it should display an error message if user input is an empty string, null or undefined ', () =>
+  it( ' should display an error message if user input is an empty string, null or undefined ', () =>
   {
     const result = convertToMorse( '' );
     expect( result ).toBe( 'Please Enter An Input Value' );
   } )
+
+  // 10. it should translate mixed case input correctly
+  it( ' should translate "HeLlO" to ".... . .-.. .-.. ---" ', () =>
+  {
+    const result = convertToMorse( 'HeLlO' );
+    expect( result ).toBe( '.... . .-.. .-.. ---' );
+  } );
 
 } )
 
@@ -111,10 +118,10 @@ describe( 'Tests for convertToEnglish function', () =>
     expect( result ).toBe( 'BOND 007' );
   } )
 
-  // 7. it should translate ..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-. to ?!.,:;+-/=()&_"$@
-  it( ' should translate "..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-." to "?!.,:;+-/=()&_"$@" ', () =>
+  // 7. it should translate ..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.- .-... ..--.- .-..-. ...-..- .--.-. to ?!.,:;+-/=()&_"$@
+  it( ' should translate "..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.- .-... ..--.- .-..-. ...-..- .--.-." to "?!.,:;+-/=()&_"$@" ', () =>
   {
-    const result = convertToEnglish( '..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-.' );
+    const result = convertToEnglish( '..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.- .-... ..--.- .-..-. ...-..- .--.-.' );
     expect( result ).toBe( '?!.,:;+-/=()&_"$@' );
   } );
 
@@ -122,7 +129,7 @@ describe( 'Tests for convertToEnglish function', () =>
   it( ' should display an error message if a character is not convertable ', () =>
   {
     const result = convertToEnglish( '*' );
-    expect( result ).toBe( 'Only Enter Convertable Characters' );
+    expect( result ).toBe( 'Only Enter Convertible Characters' );
   } )
 
   // 9. it should display an error message if user input is an empty string, null or undefined
