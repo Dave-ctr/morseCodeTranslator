@@ -66,3 +66,70 @@ describe( 'Tests for convertToMorse function', () =>
   } )
 
 } )
+
+describe( 'Tests for convertToEnglish function', () =>
+{
+  // 1. it should translate .- to a
+  it( ' should translate ".-" to "A" ', () =>
+  {
+    const result = convertToEnglish( '.-' );
+    expect( result ).toBe( 'A' );
+  } )
+
+  // 2. it should translate .---- to 1
+  it( ' should translate "1" to ".----" ', () =>
+  {
+    const result = convertToEnglish( '.----' );
+    expect( result ).toBe( '1' );
+  } )
+
+  // 3. It should translate .... . .-.. .-.. --- to hello
+  it( ' should translate ".... . .-.. .-.. ---" to "HELLO" ', () =>
+  {
+    const result = convertToEnglish( '.... . .-.. .-.. ---' );
+    expect( result ).toBe( 'HELLO' )
+  } )
+
+  // 4. it should translate ...-- ---.. to 38
+  it( ' should translate "...-- ---.." to"38" ', () =>
+  {
+    const result = convertToEnglish( '...-- ---..' );
+    expect( result ).toBe( '38' );
+  } )
+
+  // 5. it should translate .... . .-.. .-.. --- / .-- --- .-. .-.. -.. to hello world
+  it( ' should translate ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." to "HELLO WORLD" ', () =>
+  {
+    const result = convertToEnglish( '.... . .-.. .-.. --- / .-- --- .-. .-.. -..' );
+    expect( result ).toBe( 'HELLO WORLD' );
+  } )
+
+  // 6. it should translate -... --- -. -.. / ----- ----- --... to bond 007
+  it( ' should translate "-... --- -. -.. / ----- ----- --..." to "BOND 007" ', () =>
+  {
+    const result = convertToEnglish( '-... --- -. -.. / ----- ----- --...' );
+    expect( result ).toBe( 'BOND 007' );
+  } )
+
+  // 7. it should translate ..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-. to ?!.,:;+-/=()&_"$@
+  it( ' should translate "..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-." to "?!.,:;+-/=()&_"$@" ', () =>
+  {
+    const result = convertToEnglish( '..--.. -.-.-- .-.-.- --..-- ---... -.-.-. .-.-. -....- -..-. -...- -.--. -.--.-.-... ..--.- .-..-. ...-..- .--.-.' );
+    expect( result ).toBe( '?!.,:;+-/=()&_"$@' );
+  } );
+
+  // 8. it should display an error message if a character is not convertable
+  it( ' should display an error message if a character is not convertable ', () =>
+  {
+    const result = convertToEnglish( '*' );
+    expect( result ).toBe( 'Only Enter Convertable Characters' );
+  } )
+
+  // 9. it should display an error message if user input is an empty string, null or undefined
+  it( ' it should display an error message if user input is an empty string, null or undefined ', () =>
+  {
+    const result = convertToEnglish( '' );
+    expect( result ).toBe( 'Please Enter An Input Value' );
+  } )
+
+} )

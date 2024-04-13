@@ -4,7 +4,7 @@
   "description": "A simple app to translate Morse Code to English and vice versa.",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "author": "Dave",
   "license": "ISC",
