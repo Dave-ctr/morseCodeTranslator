@@ -1,0 +1,107 @@
+@font-face
+{
+  font-family: 'Punishment';
+  src: url('../assets/fonts/punishment-font/Punishment-DPwE.ttf') format('truetype');
+}
+
+@font-face
+{
+  font-family: 'Progress';
+  src: url('../assets/fonts/progress-font/ProgressPersonalUse-EaJdz.ttf') format('truetype');
+}
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BEM Format CSS */
+
+body
+{
+  background-image: url('../assets/images/camoBackground.jpg');
+}
+
+.container
+{
+  width: 75vw;
+  min-height: 80vh;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #4b5320;
+  color: green;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+.container h1
+{
+  font-family: 'Punishment', sans-serif;
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.container h2
+{
+  font-family: 'Progress', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+.container h3
+{
+  font-family: 'Progress', sans-serif;
+  color: #BBAD86;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container textarea
+{
+  width: 70vw;
+  background-color: black;
+  color: green;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.container select
+{
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #524532;
+  color: green;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+.container button
+{
+  padding: 10px 20px;
+  background-color: green;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Punishment', sans-serif;
+  font-size: 2rem;
+}
+
+.container button:hover
+{
+  background-color: darkgreen;
+}
