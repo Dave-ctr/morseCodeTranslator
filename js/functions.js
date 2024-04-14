@@ -42,7 +42,7 @@ export const convertToMorse = ( englishChars ) =>
 
     // Remove trailing space
     morseCode = morseCode.trim();
-
+    console.log( morseCode )
     // Return translation
     return morseCode;
   }
@@ -86,7 +86,7 @@ export const convertToEnglish = ( morseCode ) =>
       }
     }
   }
-
+  console.log( englishChars )
   // Return translation
   return englishChars;
 }

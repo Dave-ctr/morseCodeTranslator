@@ -6,13 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Morse Code Translator</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <script src="./js/main.js" defer></script>
-  <script src="./js/functions.js" defer></script>
-  <script src="./js/functions.test.js"></script>
+  <script src="./js/main.js" defer type="module"></script>
+  <script src="./js/functions.js" defer type="module"></script>
 </head>
 
 <body>
-
+  <div class="container">
+    <h1>Morse Code Translator</h1>
+    <div>
+      <h3>Enter Text:</h3>
+      <textarea id="translationInput"></textarea>
+    </div>
+    <div>
+      <h3>Translated Text:</h3>
+      <h2 id="translationOutput">&nbsp;
+      </h2>
+    </div>
+    <div>
+      <h3>Translation Direction:</h3>
+      <select id="translationDirection">
+        <option value="toMorse">To Morse Code</option>
+        <option value="toEnglish">To English</option>
+      </select>
+    </div>
+    <button id="translateButton">TRANSLATE</button>
+  </div>
 </body>
 
 </html>
