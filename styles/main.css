@@ -41,7 +41,7 @@ body
   min-width: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   margin: 100px auto;
   padding: 20px;
@@ -71,6 +71,7 @@ body
 .container h3
 {
   color: #BBAD86;
+  padding-bottom: 2rem;
 }
 
 .container textarea

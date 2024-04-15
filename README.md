@@ -10,7 +10,7 @@ All of your functions should be tested, with the tests written first.
 Remember to make a plan/pseudo-code before diving right in.
 
 As an extension it should be able to translate both ways.
-The logic for translating both ways won’t be exactly the same but might there might be similarities between the two translators (Morse => English, English => Morse)
+The logic for translating both ways won’t be exactly the same but there might be similarities between the two translators (Morse => English, English => Morse)
  
 Goals
 1. A working Translator: The main task is to create a tested Translator not only will this test your understanding of JavaScript but how you break down a problem.
