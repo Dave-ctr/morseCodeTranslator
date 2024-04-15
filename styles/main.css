@@ -43,18 +43,19 @@ body
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 20px;
   background-color: var(--background-color);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
   border-radius: 10px;
+  gap: 4rem;
 }
 
 .container h1
 {
   font-family: 'Punishment', sans-serif;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 4rem;
   text-align: center;
 }
@@ -74,14 +75,15 @@ body
 
 .container textarea
 {
-  width: 70vw;
+  width: 85vw;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   resize: vertical;
+  padding-top: 1rem;
 }
 
 .container select
@@ -99,7 +101,7 @@ body
 .container button
 {
   padding: 10px 20px;
-  background-color: var(--button-background);
+  background-color: var(--primary-color);
   color: whitesmoke;
   border: none;
   border-radius: 5px;
@@ -111,4 +113,5 @@ body
 .container button:hover
 {
   background-color: var(--button-background);
+  transition: 300ms ease-in-out;
 }
