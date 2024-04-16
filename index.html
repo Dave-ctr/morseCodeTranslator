@@ -5,31 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Morse Code Translator</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <script src="./js/main.js" defer type="module"></script>
 </head>
 
 <body>
   <div class="container">
-    <h1>Morse Code Translator</h1>
-    <div>
-      <h3 class="container__title">Enter Input:</h3>
-      <textarea id="translationInput"></textarea>
-    </div>
-    <div>
-      <h3 class="container__title">Translation:</h3>
-      <h2 id="translationOutput">&nbsp;
-      </h2>
-    </div>
-    <div>
-      <h3>Translation Direction:</h3>
-      <select id="translationDirection">
-        <option value="toMorse">To Morse Code</option>
-        <option value="toEnglish">To English</option>
-      </select>
-    </div>
-    <button id="translateButton">TRANSLATE</button>
-  </div>
+    <h1 class="container__main-title">Morse Code Translator</h1>
+    <section class="container__translation-area">
+      <article>
+        <h2 class="container__title">Enter Input:</h2>
+        <textarea class="container__translation-input" id="translationInput"></textarea>
+      </article>
+      <article>
+        <h2 class="container__title">Translation:</h2>
+        <h2 class="container__translation-output" id="translationOutput">&nbsp;
+        </h2>
+      </article>
+      <article>
+        <h2 class="container__title">Translation Direction:</h2>
+        <select class="container__output-selection" id="translationDirection">
+          <option value="toMorse">To Morse Code</option>
+          <option value="toEnglish">To English</option>
+        </select>
+      </article>
+    </section>
+    <button class="container__translate-button" id="translateButton">TRANSLATE</button>
+
 </body>
 
 </html>

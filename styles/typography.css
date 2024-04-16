@@ -1,0 +1,12 @@
+/* Define font faces */
+@font-face
+{
+  font-family: 'Punishment';
+  src: url('../assets/fonts/punishment-font/Punishment-DPwE.ttf') format('truetype');
+}
+
+@font-face
+{
+  font-family: 'Progress';
+  src: url('../assets/fonts/progress-font/ProgressPersonalUse-EaJdz.ttf') format('truetype');
+}

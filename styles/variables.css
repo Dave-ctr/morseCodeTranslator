@@ -1,0 +1,9 @@
+/* Define recurring styles in variables */
+:root
+{
+  --primary-color: green;
+  --secondary-color: black;
+  --primary-background-color: #4b5320;
+  --secondary-background-color: #524532;
+  --button-background: darkgreen;
+}
