@@ -9,7 +9,7 @@ const characters =
   '?': '..--..', '!': '-.-.--', ',': '--..--', '.': '.-.-.-', ';': '-.-.-.', ':': '---...', '+': '.-.-.', '-': '-....-', '/': '-..-.', '=': '-...-', '(': '-.--.', ')': '-.--.-', '&': '.-...', '_': '..--.-', '"': '.-..-.', '$': '...-..-', '@': '.--.-.', '\n': '/'
 }
 
-// 1. write a function to convert english to morse code
+// 1. Write a function to convert english to morse code
 export const convertToMorse = ( englishChars ) =>
 {
   // If input is empty, return an error message
@@ -42,20 +42,17 @@ export const convertToMorse = ( englishChars ) =>
 
     // Remove trailing space
     morseCode = morseCode.trim();
-    console.log( morseCode )
+
     // Return translation
     return morseCode;
   }
 }
 
-// 2. write a function to convert morse code to english
+// 2. Write a function to convert morse code to english
 export const convertToEnglish = ( morseCode ) =>
 {
-  console.log( morseCode )
-
   // Trim the input morse code to allow for extra space or new line input
   morseCode = morseCode.trim();
-  console.log( 'trimed morse: ', morseCode )
 
   // If input is empty return an error message
   if ( !morseCode ) return 'Please Enter An Input Value';
@@ -93,8 +90,6 @@ export const convertToEnglish = ( morseCode ) =>
     }
   }
 
-
-  console.log( englishChars )
   // Return translation
   return englishChars;
 }
