@@ -5,7 +5,7 @@ It is built with HTMl, CSS and JavaScript.
 
 # Instructions
 
-* Click here to visit the app: <a href="https://dave-ctr.github.io/morseCodeTranslator/" >Morse Code Translator</a> 
+* Click here to visit the app: <a href="https://davejamieson.github.io/morseCodeTranslator/" >Morse Code Translator</a> 
 
 * Enter the English Characters or Morse Code to be translated into the input field
 * Select the desired output via the dropdown menu
