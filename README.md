@@ -51,25 +51,33 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Below are examples of unit tests written for the translation functions:
 
 ```javascript
-const { toMorse, toEnglish } = require('./functions');
 
-test('translates English to Morse Code', () => {
-    expect(toMorse('HELLO')).toBe('.... . .-.. .-.. ---');
-    expect(toMorse('WORLD')).toBe('.-- --- .-. .-.. -..');
-});
+// 5. it should translate hello world to .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  it( ' should translate "HELLO WORLD" to ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." ', () =>
+  {
+    const result = convertToMorse( 'HELLO WORLD' );
+    expect( result ).toBe( '.... . .-.. .-.. --- / .-- --- .-. .-.. -..' );
+  } )
 
-test('translates Morse Code to English', () => {
-    expect(toEnglish('.... . .-.. .-.. ---')).toBe('HELLO');
-    expect(toEnglish('.-- --- .-. .-.. -..')).toBe('WORLD');
-});
+  // 6. it should translate bond 007 to -... --- -. -.. / ----- ----- --... 
+  it( ' should translate "BOND 007" to "-... --- -. -.. / ----- ----- --..." ', () =>
+  {
+    const result = convertToMorse( 'BOND 007' );
+    expect( result ).toBe( '-... --- -. -.. / ----- ----- --...' );
+  } )
 
-test('handles empty input', () => {
-    expect(toMorse('')).toBe('');
-    expect(toEnglish('')).toBe('');
-});
 
-test('ignores invalid characters', () => {
-    expect(toMorse('HELLO!')).toBe('.... . .-.. .-.. ---');
-    expect(toEnglish('.... . .-.. .-.. --- !')).toBe('HELLO');
-});
+ // 8. it should display an error message if a character is not convertable
+  it( ' should display an error message if a character is not convertable ', () =>
+  {
+    const result = convertToEnglish( '*' );
+    expect( result ).toBe( 'Only Enter Convertible Characters' );
+  } )
+
+  // 9. it should display an error message if user input is an empty string, null or undefined
+  it( ' it should display an error message if user input is an empty string, null or undefined ', () =>
+  {
+    const result = convertToEnglish( '' );
+    expect( result ).toBe( 'Please Enter An Input Value' );
+  } )
 ```
